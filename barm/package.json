@@ -1,0 +1,30 @@
+{
+  "name": "barm",
+  "version": "0.2.11",
+  "description": "consumElement.define like react",
+  "repository": "ymzuiku/barm",
+  "author": "pillar <ymblender@gmail.com>",
+  "main": "umd/index.js",
+  "types": "umd/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "node rollup.config.js --watch",
+    "build": "node rollup.config.js"
+  },
+  "dependencies": {
+    "@nuage/htm": "^2.2.2"
+  },
+  "keywords": [
+    "front framework",
+    "react",
+    "vue",
+    "WebComponents"
+  ],
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "rollup-plugin-uglify": "^6.0.3",
+    "typescript": "3.5.2"
+  }
+}

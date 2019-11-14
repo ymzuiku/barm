@@ -1,0 +1,16 @@
+{
+  "name": "barm-group",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "root@120.79.150.132:/db/git/barm.git",
+  "author": "梁柱 <ymblender@gmail.com>",
+  "workspaces": [
+    "example",
+    "barm",
+    "barm-if",
+    "barm-redux",
+    "barm-redux-route"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("immer")):"function"==typeof define&&define.amd?define(["exports","immer"],t):t((e=e||self).queryString={},e.produce)}(this,function(e,n){"use strict";function t(e,t){return"function"==typeof t?n(e,function(e){t(e)}):e}n=n&&n.hasOwnProperty("default")?n.default:n,t.key="applyReducerToImmer",e.applyReducerToImmer=t,Object.defineProperty(e,"__esModule",{value:!0})});
+//# sourceMappingURL=applyReducerImmer.js.map
