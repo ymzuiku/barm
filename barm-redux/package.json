@@ -1,6 +1,6 @@
 {
   "name": "barm-redux",
-  "version": "0.2.11",
+  "version": "1.0.0",
   "description": "consumElement.define like react",
   "repository": "ymzuiku/barm",
   "author": "pillar <ymblender@gmail.com>",
@@ -8,7 +8,7 @@
   "types": "umd/index.d.ts",
   "scripts": {
     "start": "node rollup.config.js --watch",
-    "build": "node rollup.config.js"
+    "lib": "node rollup.config.js"
   },
   "keywords": [
     "front framework",
@@ -17,6 +17,6 @@
     "WebComponents"
   ],
   "dependencies": {
-    "immer": "^4.0.1"
+    "barm": "^1.0.0"
   }
 }

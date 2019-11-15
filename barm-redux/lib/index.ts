@@ -1,5 +1,4 @@
 import { Component, define, html } from 'barm';
-import { applyReducerImmer } from './applyReducerImmer';
 
 export type IMiddleware = <T>(getState: any, dispatch: any) => { getState: any; dispatch: any };
 
@@ -23,15 +22,24 @@ export interface IStore<T> {
   defineConnect: (
     tag: string,
     mapStateToProps?: (state: T) => any,
-    mapDispatchToProps?: (dispatch: any) => any
+    mapDispatchToProps?: (dispatch: any) => any,
   ) => (Ele: any) => any;
   applyMiddleware: (...middleWares: IMiddleware[]) => any;
   applyReducer: (newReducer: any) => void;
 }
 
+export function reducerInAction(state: any, action: any) {
+  if (typeof action === 'function') {
+    action(state);
+  }
+
+  return state;
+}
+
+reducerInAction.key = 'reducerInAction';
+
 export const createStore = <T>(reducer: any, initState: T): IStore<T> => {
   let state = initState as any;
-  let theReducer = reducer || applyReducerImmer;
 
   const subscribes = new Set();
 
@@ -69,11 +77,9 @@ export const createStore = <T>(reducer: any, initState: T): IStore<T> => {
         define(hashTag)(Ele);
         define(tag)(store.connect(mstp, mdtp)(hashTag));
       };
-
-      return null as any;
     },
     dispatch: (action: any) => {
-      state = theReducer(state, action);
+      state = reducer(state, action);
       subscribes.forEach((fn: any) => {
         fn(state);
       });
@@ -118,7 +124,7 @@ export const createStore = <T>(reducer: any, initState: T): IStore<T> => {
 
             return children(...this.lastMemo);
           };
-        }
+        },
       );
     },
     getState: () => state,
@@ -148,9 +154,9 @@ export const createStore = <T>(reducer: any, initState: T): IStore<T> => {
         }
       }
 
-      const oldReducer = theReducer;
+      const oldReducer = reducer;
 
-      theReducer = (theState: any, action: any) => {
+      reducer = (theState: any, action: any) => {
         const oldState = oldReducer(theState, action);
 
         return newReducer(oldState, action);

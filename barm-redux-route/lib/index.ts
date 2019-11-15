@@ -138,7 +138,7 @@ export function createRoute(store: any) {
                     },
                   });
                 }, leaveTime);
-              }
+              },
             );
           } else {
             this.setState({
@@ -166,7 +166,7 @@ export function createRoute(store: any) {
       const styleStr = `width: 100%; height: 100%; overflow: hidden; left: 0px; top: 0px; ${style}`;
 
       return html`
-        <div about=${path} class=${className} style=${styleStr}>
+        <div data-path=${path} class=${className} style=${styleStr}>
           ${this.realChild}
         </div>
       `;

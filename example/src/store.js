@@ -1,4 +1,4 @@
-import { createStore } from 'barm-redux';
+import { createStore, reducerInAction } from 'barm-redux';
 import { createRoute } from 'barm-redux-route';
 
 const initState = {
@@ -10,7 +10,7 @@ const initState = {
   },
 };
 
-export const store = createStore(undefined, initState);
+export const store = createStore(reducerInAction, initState);
 export const routeMap = createRoute(store);
 
 store.defineConsumer('app-consumer');

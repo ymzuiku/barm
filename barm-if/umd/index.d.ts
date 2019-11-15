@@ -1,4 +1,4 @@
 export interface IBarmIf {
-    is: any;
+    show: any;
     children: any;
 }

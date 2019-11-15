@@ -154,6 +154,7 @@ export class Component<P> extends BabelHTMLElement {
       this.__setStateTimer = null;
     }
 
+    // setState设置为异步，并且只执行最后一次的更新
     this.__setStateTimer = setTimeout(() => {
       this.update(this.props, this.__nextState, true);
 

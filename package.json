@@ -5,6 +5,9 @@
   "private": true,
   "repository": "root@120.79.150.132:/db/git/barm.git",
   "author": "梁柱 <ymblender@gmail.com>",
+  "scripts": {
+    "publish": "cd barm && yarn lib && npm publish --access public && cd ../barm-if && yarn lib && npm publish --access public && cd ../barm-redux && yarn lib && npm publish --access public && cd ../barm-redux-route && yarn lib && npm publish --access public"
+  },
   "workspaces": [
     "example",
     "barm",

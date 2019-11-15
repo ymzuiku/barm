@@ -11,7 +11,7 @@ export interface IHistory {
   defineRoute: (name: string) => string;
   /** 获取某个path的状态 [是否当前页，是否在栈中，是否次页，栈的编号] */
   checkUrlMatch(
-    path: string
+    path: string,
   ): {
     index: number;
     lastPage: boolean;
@@ -29,14 +29,14 @@ export interface IHistory {
     historic?: {
       [key: string]: any;
     },
-    stopPush?: boolean
+    stopPush?: boolean,
   ): void;
   /** 替换当前路由状态 */
   replace(
     path: string,
     historic?: {
       [key: string]: any;
-    }
+    },
   ): void;
 }
 
@@ -70,7 +70,7 @@ export const createHistory = (store: any): IHistory => {
   };
 
   const checkUrlMatch = (
-    path: string
+    path: string,
   ): {
     index: number;
     lastPage: boolean;
@@ -154,11 +154,17 @@ export const createHistory = (store: any): IHistory => {
       const nextHistoric = { ...state.history[path], ...historic };
       state.history[path] = nextHistoric;
       state.paths[state.paths.length - 1] = thePath;
+      state.history = { ...state.history };
+      state.paths = [...state.paths];
 
       if (typeof window !== 'undefined') {
         const query = queryString.stringify(nextHistoric);
 
-        window.history.replaceState(null, `${space}${thePath}`, query === '' ? `${space}${thePath}` : `${space}${thePath}?${query}`);
+        window.history.replaceState(
+          null,
+          `${space}${thePath}`,
+          query === '' ? `${space}${thePath}` : `${space}${thePath}?${query}`,
+        );
       }
     });
 
@@ -174,9 +180,15 @@ export const createHistory = (store: any): IHistory => {
       state.paths.push(path);
       const nextHistoric = { ...state.history[path], ...historic };
       state.history[path] = nextHistoric;
+      state.history = { ...state.history };
+
       if (typeof window !== 'undefined' && !stopPush && !isKeepHistory) {
         const query = queryString.stringify(nextHistoric);
-        window.history.pushState(null, `${space}${path}`, query === '' ? `${space}${path}` : `${space}${path}?${query}`);
+        window.history.pushState(
+          null,
+          `${space}${path}`,
+          query === '' ? `${space}${path}` : `${space}${path}?${query}`,
+        );
       }
     });
 
@@ -199,6 +211,9 @@ export const createHistory = (store: any): IHistory => {
         }
         state.history[realState.paths[_index]] = {};
         state.paths.pop();
+
+        state.history = { ...state.history };
+        state.paths = [...state.paths];
       }
     });
 

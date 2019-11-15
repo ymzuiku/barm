@@ -17,4 +17,9 @@ export interface IStore<T> {
     applyMiddleware: (...middleWares: IMiddleware[]) => any;
     applyReducer: (newReducer: any) => void;
 }
+declare function reducerInAction(state: any, action: any): any;
+declare namespace reducerInAction {
+    var key: string;
+}
+export default reducerInAction;
 export declare const createStore: <T>(reducer: any, initState: T) => IStore<T>;

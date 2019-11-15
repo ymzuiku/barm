@@ -11,13 +11,11 @@ define('example-app')(
     };
     render = () => {
       return html`
-        <div>
-          <app-route path="/home" component="page-home" />
-          <app-route path="user" component="page-user" />
-        </div>
+        <app-route path="/home" component="page-home" />
+        <app-route path="/user" component="page-user" />
       `;
     };
-  }
+  },
 );
 
 document.body.append(document.createElement('example-app'));

@@ -1,13 +1,13 @@
 import { html } from 'barm';
 
 export interface IBarmIf {
-  is: any;
+  show: any;
   children: any;
 }
 
-function BarmIf({ is, children }: IBarmIf) {
+function BarmIf({ show, children }: IBarmIf) {
   return html`
-    ${is && children}
+    ${show && children}
   `;
 }
 
