@@ -11,7 +11,7 @@
 
 其中 WebApp 随着各行各业业务的不断发展，仅仅 SPA 应用已经很难满足现有的迭代开发；各类微服务方案开始被提上议程，其中以 web-components 为基础的微服务方案关注度较高。
 
-barm 是一个渐进式、微服务胶水框架，基于 web-components，并且对 React 开发者友好。
+barm 是一个渐进式、微服务胶水方案，基于 web-components，并且对 React 开发者友好。
 
 这意味着 barm 必须满足以下条件：
 
@@ -290,9 +290,9 @@ barm 虽然使用了 web-components 但是并没有使用 shadow-dom
 
 这是因为 barm 每个组件都是一个 web-component，shadow-dom 的样式隔离对于很多业务情景并无必要，现实中我们使用 BEM 已经能够很好的隔离样式污染和更好的共享样式，未来可以考虑添加一个属性以决定是否开启 shadow-dom。
 
-## 微前端
+## 嵌入到 React 中
 
-barm 立志于创建一个微前端架构，它第一个功能是需要跨框架，理论上 barm 可以在任何框架内允许
+barm 立志于创建一个微服务胶水方案，意味着它创建的组件很容易的在各框架内使用；
 
 以 react 为例子, 假定我们使用 barm 创建了一个 page-home web-component, 我们在 react 使用它和使用 原生 DOM 元素类似：
 
