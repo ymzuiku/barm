@@ -1108,11 +1108,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@nuage/htm@^2.2.2":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@nuage/htm/-/htm-2.2.3.tgz#53e0cf67d647526499945133dd3d9d56bb5424b5"
-  integrity sha512-qqBrLqts/Kys5j5EXq6iifPTa3ELGSRxbMiJs2zo4fCZNt0y4lcDvcJy6jF4j3AFkQjLRRJWDZt3l5CvlzNCkA==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -2014,35 +2009,6 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
-
-barm-if@0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/barm-if/-/barm-if-0.2.11.tgz#f53ae32979fad4980473da11e4173ba4e07b1564"
-  integrity sha512-5fx1rvukOuzhKfP6KhtVaLrV9Bu2rfxcm6u41DbxbaygrHdi5q32UZ4bcnefYrbv3EZpmWZo3LJKqbn5mMKTUQ==
-  dependencies:
-    barm "0.2.11"
-
-barm-redux-route@0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/barm-redux-route/-/barm-redux-route-0.2.11.tgz#f209cf6f76224063f5c41fa836cdd138b05a3b55"
-  integrity sha512-cmIVH+19cX9nFGSeQClGyZY5/xdE0oi/4Db/QjEtVlsMPh+vSSilbhDiWmvJM+VbBRRVIorKqVKUcehEXMK4fQ==
-  dependencies:
-    barm "0.2.11"
-    querystring-number "^1.0.6"
-
-barm-redux@0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/barm-redux/-/barm-redux-0.2.11.tgz#cf4214fdbd0e72059df870254a113e96091466a4"
-  integrity sha512-tWpSv9zKdsD375V8kw9jUf1m9lL+CwtIXR0yr3r4CbvDXjBPdL9CIhNHXLb8ireDwAPFY/oORlSmYTWUNjnqbg==
-  dependencies:
-    immer "^4.0.1"
-
-barm@0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/barm/-/barm-0.2.11.tgz#d3d80e13d7fefc7ffbd5f54a5e3516f65a2b6335"
-  integrity sha512-rh9b9sBUPiIohyt9WHH/hNoG2eLdGJ6FxKnIiVFiPkjm3uFcBuij5wXEm8IEuJczZ4lvYbS25xbBrPr1Je1+EA==
-  dependencies:
-    "@nuage/htm" "^2.2.2"
 
 base64-js@^1.0.2:
   version "1.3.1"
@@ -4784,11 +4750,6 @@ immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
   integrity sha512-O3sR1/opvCDGLEVcvrGTMtLac8GJ5IwZC4puPrLuRj3l7ICKvkmA0vGuU9OW8mV9WIBRnaxp5GJh9IEAaNOoYg==
-
-immer@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-4.0.1.tgz#9108c1ece7fdd7efb91d21e5eb4bac26f7c3a8ba"
-  integrity sha512-qZFpWApnbubcJ03gvWa6zUQz2OTkDc6yINdFXI1lm2IoMYsiVVMrxvfeLDURFhUGJfsQysDUjHSXYnJfMMHAwQ==
 
 import-cwd@^2.0.0:
   version "2.1.0"

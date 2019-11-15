@@ -1,6 +1,6 @@
 {
   "name": "barm-redux-route",
-  "version": "1.0.01",
+  "version": "1.0.2",
   "description": "consumElement.define like react",
   "repository": "ymzuiku/barm",
   "author": "pillar <ymblender@gmail.com>",
@@ -17,7 +17,7 @@
     "WebComponents"
   ],
   "dependencies": {
-    "barm": "^1.0.01",
+    "barm": "^1.0.0",
     "querystring-number": "^1.0.6"
   }
 }

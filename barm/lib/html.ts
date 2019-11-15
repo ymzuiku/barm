@@ -244,13 +244,8 @@ export const html = function(statics: any, ...args: any) {
 };
 
 function h(tag: any, props: any, ...children: any[]) {
-  if (tag.define) {
-    return {
-      tag: tag.name,
-      props: props || {},
-      children,
-      key: (props && props.key) || null,
-    };
+  if (typeof tag === 'function') {
+    return tag(props);
   }
 
   return {

@@ -1,5 +1,5 @@
-import { Component } from "./Component";
-import { createBabelConstruct } from "./createBabelConstruct";
+import { Component } from './Component';
+import { createBabelConstruct } from './createBabelConstruct';
 
 export const createComponent = <T>(FN: any) => {
   if (FN.isClass) {
@@ -15,7 +15,14 @@ export const createComponent = <T>(FN: any) => {
   return createBabelConstruct(PureDefineComponent);
 };
 
-export const define = (name: string) => {
+declare function IDefineCb<P extends any>(functionComponent: (props: P, hooks: Component<P>) => any): any;
+declare function IDefineCb<P extends any>(classComponent: any): any;
+
+declare function IDefine(name: string): typeof IDefineCb;
+
+export const useHooks = (setHooks: <P extends any>(hooks: Component<P>, ...args: any[]) => any) => setHooks;
+
+export const define: typeof IDefine = (name: string) => {
   return (Ele: any) => {
     customElements.define(name, createComponent<any>(Ele));
   };

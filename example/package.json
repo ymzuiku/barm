@@ -5,10 +5,10 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-scripts": "3.2.0",
-    "barm": "0.2.11",
-    "barm-if": "0.2.11",
-    "barm-redux": "0.2.11",
-    "barm-redux-route": "0.2.11"
+    "barm": "1.0.1",
+    "barm-if": "1.0.0",
+    "barm-redux": "1.0.0",
+    "barm-redux-route": "1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

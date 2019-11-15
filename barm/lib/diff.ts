@@ -42,7 +42,7 @@ function diffNode(dom: any, vnode: any) {
 
   let isUpdated = false;
   let isNeedReplace = false;
-  const isWebComponent = vnode && vnode.tag.indexOf('-') > 0;
+  const isWebComponent = typeof vnode.tag === 'string' && vnode.tag.indexOf('-') > 0;
 
   const nextProps = {
     ...vnode.props,
