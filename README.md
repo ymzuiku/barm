@@ -8,6 +8,8 @@ size: 4KB(gzip)
 
 ## 基本使用
 
+因为 barm 定位是一个微服务框架，所以它不应该特别依赖于编译环境；所以 barm 使用 html 字符串解析，不需要配置 JSX 解析的 babel，我们来看一个例子：
+
 注册 web-component
 
 ```js
@@ -30,8 +32,6 @@ define('page-user')(User);
 const pageUser = document.createElement('page-user');
 document.body.append(pageUser);
 ```
-
-## 组件
 
 barm 每个组件都是一个 web-component, 遵循 react API 及生命周期
 
@@ -119,7 +119,7 @@ define('page-user')(User);
 - Render Props
 - HOC
 
-### Pure Component
+### 支持 Pure Component
 
 ```js
 import { html, define } from 'barm';
@@ -133,7 +133,7 @@ define('page-user')(() => {
 });
 ```
 
-## Hooks: Function Component 支持生命周期
+### 支持 Hooks: Function Component 支持生命周期
 
 函数组件的第二个参数是一个 hooks，它会暴露一个 Class Component 完整的生命周期及类成员变量给到函数组件;
 
@@ -164,7 +164,7 @@ define('render-hooks')((props, hooks) => {
 });
 ```
 
-### 抽象 Hooks
+### 支持 Hooks 抽象
 
 React hooks 的一个特点就是可以将生命周期的逻辑抽离并复用，在 barm 中我们也可以实现同质效果；
 
@@ -200,7 +200,7 @@ define('render-hooks')((props, hooks) => {
 });
 ```
 
-### Render Props
+### 支持 Render Props
 
 ```js
 import { html, define } from 'barm';
@@ -226,7 +226,7 @@ define('page-user')(() => {
 });
 ```
 
-### HOC
+### 支持 HOC
 
 HOC(高阶函数)是 React 早起的一种生命周期抽象的设计模式, 虽然我们有了 hooks\renderProps 等同类的抽象行为，不过 Barm 也同样支持 HOC
 
@@ -293,7 +293,7 @@ export function HomePage() {
 }
 ```
 
-## 必备生态
+### 独立发布、独立部署
 
 barm 除了可以很轻松的在各前端框架内使用，还需要满足自身的独立发布、独立部署，所以它需要一些必备生态：状态管理和路由;
 
