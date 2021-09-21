@@ -1108,11 +1108,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@nuage/htm@^2.2.2":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@nuage/htm/-/htm-2.2.3.tgz#53e0cf67d647526499945133dd3d9d56bb5424b5"
-  integrity sha512-qqBrLqts/Kys5j5EXq6iifPTa3ELGSRxbMiJs2zo4fCZNt0y4lcDvcJy6jF4j3AFkQjLRRJWDZt3l5CvlzNCkA==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -2005,12 +2000,37 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
-barm@0.2.11:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/barm/-/barm-0.2.10.tgz#999db67580d26bdf75a4b7cb58284e9a950b121f"
-  integrity sha512-EFWZR+LQgVoY4p6Wc+9GLNTlEi2/rsBwn+7EYzTW+EYuOLhkTZp/91AXk4GC/LY8kMMlO8f3/yoUN0lp0DozgQ==
+barm-if@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/barm-if/-/barm-if-1.0.0.tgz#96775d0a24972f9bfd6aafe1c64a83483f001fab"
+  integrity sha512-9gVp3JZlhlot5LgzPyO/8Ap+o5fKZNuOhPXBt/RkDUQc9hIwiL+/WflZHy8r3z0M+qiaEyUELXPQBXB+N9AaOg==
   dependencies:
-    "@nuage/htm" "^2.2.2"
+    barm "^1.0.0"
+
+barm-redux-route@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/barm-redux-route/-/barm-redux-route-1.0.2.tgz#ee4117a73410b9d8d815e3468ac62f8f43a6e148"
+  integrity sha512-hxlVMOl+F3bHX03j/TNRC/Gw3XZbuXai4dAgRTfwfBgSBUCjixRjc1BiEb4tWo+raichwVy2rAXpBSuU4lCpnQ==
+  dependencies:
+    barm "^1.0.0"
+    querystring-number "^1.0.6"
+
+barm-redux@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/barm-redux/-/barm-redux-1.0.0.tgz#1d1bc5284e3093cce79d46d607dc0df169de3664"
+  integrity sha512-H5411WdCjzMGQe3BLDDYsr1riEPDGFwqncxVRBMQwKOTWXfrl10prb3MPEiG9iEuq0p6YgS8Wx6j8bJP8AAi9w==
+  dependencies:
+    barm "^1.0.0"
+
+barm@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/barm/-/barm-1.0.1.tgz#4300f946275650c2c0b54931fc0fc53511e9457c"
+  integrity sha512-hiVGZo0Ls+f6cmOhWVV/+R/DLSPcMQs3YXnDBFtPeIZSVZd1aqEgqbD7YTHbh+hSa9jRs6WkAfRjtXIGgwGrgg==
+
+barm@^1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/barm/-/barm-1.0.3.tgz#4c3c585f055117f0b19e1d588d61a4dda784052b"
+  integrity sha512-+60Br5mcESplH1conQRkhRmbh/bpAY+QTn4Lu98l2kyx0hXdG7gBDTiTil2Z3hNqCB7do1HWgf/MctervzL6cw==
 
 base64-js@^1.0.2:
   version "1.3.1"
@@ -7933,6 +7953,11 @@ querystring-es3@^0.2.0:
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
   integrity sha1-nsYfeQSYdXB9aUFFlv2Qek1xHnM=
 
+querystring-number@^1.0.6:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/querystring-number/-/querystring-number-1.1.1.tgz#d5cfbcbf094959fe760cf52733ad9e46d9efb598"
+  integrity sha512-zrWblSalx+4FaOntMEDNKVHQnAPCiasfbzfntAaJ/+PBqBnoz9b45JxQvivPUQkeBOTplyc6DmHeVQqKbYUW2w==
+
 querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
@@ -9322,9 +9347,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
