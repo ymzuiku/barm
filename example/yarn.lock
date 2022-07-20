@@ -1108,11 +1108,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@nuage/htm@^2.2.2":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@nuage/htm/-/htm-2.2.3.tgz#53e0cf67d647526499945133dd3d9d56bb5424b5"
-  integrity sha512-qqBrLqts/Kys5j5EXq6iifPTa3ELGSRxbMiJs2zo4fCZNt0y4lcDvcJy6jF4j3AFkQjLRRJWDZt3l5CvlzNCkA==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -2005,12 +2000,37 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
-barm@0.2.11:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/barm/-/barm-0.2.10.tgz#999db67580d26bdf75a4b7cb58284e9a950b121f"
-  integrity sha512-EFWZR+LQgVoY4p6Wc+9GLNTlEi2/rsBwn+7EYzTW+EYuOLhkTZp/91AXk4GC/LY8kMMlO8f3/yoUN0lp0DozgQ==
+barm-if@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/barm-if/-/barm-if-1.0.0.tgz#96775d0a24972f9bfd6aafe1c64a83483f001fab"
+  integrity sha512-9gVp3JZlhlot5LgzPyO/8Ap+o5fKZNuOhPXBt/RkDUQc9hIwiL+/WflZHy8r3z0M+qiaEyUELXPQBXB+N9AaOg==
   dependencies:
-    "@nuage/htm" "^2.2.2"
+    barm "^1.0.0"
+
+barm-redux-route@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/barm-redux-route/-/barm-redux-route-1.0.2.tgz#ee4117a73410b9d8d815e3468ac62f8f43a6e148"
+  integrity sha512-hxlVMOl+F3bHX03j/TNRC/Gw3XZbuXai4dAgRTfwfBgSBUCjixRjc1BiEb4tWo+raichwVy2rAXpBSuU4lCpnQ==
+  dependencies:
+    barm "^1.0.0"
+    querystring-number "^1.0.6"
+
+barm-redux@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/barm-redux/-/barm-redux-1.0.0.tgz#1d1bc5284e3093cce79d46d607dc0df169de3664"
+  integrity sha512-H5411WdCjzMGQe3BLDDYsr1riEPDGFwqncxVRBMQwKOTWXfrl10prb3MPEiG9iEuq0p6YgS8Wx6j8bJP8AAi9w==
+  dependencies:
+    barm "^1.0.0"
+
+barm@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/barm/-/barm-1.0.1.tgz#4300f946275650c2c0b54931fc0fc53511e9457c"
+  integrity sha512-hiVGZo0Ls+f6cmOhWVV/+R/DLSPcMQs3YXnDBFtPeIZSVZd1aqEgqbD7YTHbh+hSa9jRs6WkAfRjtXIGgwGrgg==
+
+barm@^1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/barm/-/barm-1.0.3.tgz#4c3c585f055117f0b19e1d588d61a4dda784052b"
+  integrity sha512-+60Br5mcESplH1conQRkhRmbh/bpAY+QTn4Lu98l2kyx0hXdG7gBDTiTil2Z3hNqCB7do1HWgf/MctervzL6cw==
 
 base64-js@^1.0.2:
   version "1.3.1"
@@ -2212,9 +2232,9 @@ bser@^2.0.0:
     node-int64 "^0.4.0"
 
 buffer-from@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
-  integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
+  integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
 buffer-indexof@^1.0.0:
   version "1.1.1"
@@ -2584,9 +2604,9 @@ commander@2.20.0:
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
 
 commander@^2.11.0, commander@^2.20.0:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.1.tgz#3863ce3ca92d0831dcf2a102f5fb4b5926afd0f9"
-  integrity sha512-cCuLsMhJeWQ/ZpsFTbE765kvVfoeSddc4nU3up4fV+fDBcfUXnbITJ+JzhkdjzOqhURjZgujxaioam4RM9yGUg==
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
 commander@~2.19.0:
   version "2.19.0"
@@ -7933,6 +7953,11 @@ querystring-es3@^0.2.0:
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
   integrity sha1-nsYfeQSYdXB9aUFFlv2Qek1xHnM=
 
+querystring-number@^1.0.6:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/querystring-number/-/querystring-number-1.1.7.tgz#72271d4b9a69546b8fd0923658d54c5b277f975b"
+  integrity sha512-PKAJybbkZvnpc/MgR9Cs8oXC3p+M/CzmZpG0a5h5biSj8YucJy3Z3AVgFeAaltWitHSQTpcQ8TQs6mQFNq3pPw==
+
 querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
@@ -8847,9 +8872,9 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
     urix "^0.1.0"
 
 source-map-support@^0.5.6, source-map-support@~0.5.12:
-  version "0.5.13"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.13.tgz#31b24a9c2e73c2de85066c0feb7d44767ed52932"
-  integrity sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==
+  version "0.5.21"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
+  integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -9256,9 +9281,9 @@ terser-webpack-plugin@1.4.1, terser-webpack-plugin@^1.4.1:
     worker-farm "^1.7.0"
 
 terser@^4.1.2:
-  version "4.3.8"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-4.3.8.tgz#707f05f3f4c1c70c840e626addfdb1c158a17136"
-  integrity sha512-otmIRlRVmLChAWsnSFNO0Bfk6YySuBp6G9qrHiJwlLDd4mxe2ta4sjI7TzIR+W1nBMjilzrMcPOz9pSusgx3hQ==
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.8.1.tgz#a00e5634562de2239fd404c649051bf6fc21144f"
+  integrity sha512-4GnLC0x667eJG0ewJTa6z/yXrbLGv80D9Ru6HIpCQmO+Q4PfEtBFi0ObSckqwL6VyQv/7ENJieXHo2ANmdQwgw==
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
